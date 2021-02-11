@@ -1,0 +1,63 @@
+<section class="site-section" id="section-contact">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <div class="section-heading text-center">
+          <h2><strong>Contacto</strong></h2>
+        </div>
+      </div>
+
+      <div class="col-md-10 mx-auto mb-5 mb-md-0">
+        <form
+          [formGroup]="contactForm"
+          (ngSubmit)="sendEmail()"
+          class="site-form"
+        >
+          <div class="form-group">
+            <input
+              type="text"
+              formControlName="name"
+              class="form-control px-3 py-4"
+              placeholder="Nombre"
+            />
+            <span *ngIf="fieldIsInvalid('name')" class="text-danger"
+              >EL nombre es obligatorio</span
+            >
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control px-3 py-4"
+              placeholder="Correro electronico"
+            />
+            <span *ngIf="fieldIsInvalid('email')" class="text-danger"
+              >EL email es obligatorio</span
+            >
+          </div>
+          <div class="form-group mb-3">
+            <textarea
+              class="form-control px-3 py-4"
+              formControlName="message"
+              cols="20"
+              rows="5"
+              placeholder="Por favor dejanos tu mensaje"
+            ></textarea>
+            <span *ngIf="fieldIsInvalid('message')" class="text-danger"
+              >EL mensaje es obligatorio</span
+            >
+          </div>
+
+          <div class="form-group text-center">
+            <input
+              type="submit"
+              id="button"
+              class="btn btn-primary px-4 py-3"
+              value="Enviar Mensage"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

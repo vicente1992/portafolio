@@ -1,0 +1,82 @@
+<!-- Portafolio -->
+<section class="site-section mb-2" id="section-portfolio">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <div class="section-heading text-center">
+          <h2><strong>Portafolio</strong></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let project of projects">
+        <div class="blog-entry">
+          <img
+            [src]="project.img"
+            id="img-fluid"
+            alt="Image placeholder"
+            class="img-fluid"
+          />
+          <div class="blog-entry-text">
+            <h3>
+              <a href="#">{{ project.name }}</a>
+            </h3>
+            <p class="mb-4">
+              {{ project.description }}
+            </p>
+            <div class="meta text-center">
+              <a
+                [href]="project.web"
+                target="_blank"
+                class="btn btn-primary btn-sm px-2 py-2"
+                style="color: #ffffff; font-size: 14px"
+                ><span class="icon-desktop"></span> Web</a
+              >
+              <a
+                [href]="project.github"
+                target="_blank"
+                class="btn btn-primary btn-sm px-2 py-2"
+                style="color: #ffffff; font-size: 14px"
+                ><span class="icon-github"></span>Github</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="blog-entry">
+          <a href="#"
+            ><img
+              src="assets/images/p3.jpg"
+              alt="Image placeholder"
+              class="img-fluid"
+          /></a>
+          <div class="blog-entry-text">
+            <h3><a href="#">Creative Product Designer From Facebook</a></h3>
+            <p class="mb-4">
+              Even the all-powerful Pointing has no control about the blind
+              texts it is an almost unorthographic.
+            </p>
+
+            <div class="meta text-center">
+              <a
+                href="#"
+                class="btn btn-primary btn-sm px-2 py-2"
+                style="color: #ffffff; font-size: 14px"
+                ><span class="icon-desktop"></span> Web</a
+              >
+              <a
+                href="#"
+                class="btn btn-primary btn-sm px-2 py-2"
+                style="color: #ffffff; font-size: 14px"
+                ><span class="icon-github"></span>Github</a
+              >
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
